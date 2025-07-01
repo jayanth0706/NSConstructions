@@ -13,7 +13,7 @@ Our focus:
 
 ## 🌐 Website
 
-Visit us at: [www.nsconstructions.com](http://www.nsconstructions.com) *(update this with your actual URL)*
+Visit us at: [ns-constructions.vercel.app](https://ns-constructions.vercel.app/) 
 
 ## 🚧 Features
 
@@ -25,8 +25,6 @@ Visit us at: [www.nsconstructions.com](http://www.nsconstructions.com) *(update 
 - Responsive Design for all devices
 
 ## 🛠️ Tech Stack
-
-> Update this section based on your actual implementation
 
 - **Frontend:** HTML, CSS, JavaScript / React / Bootstrap
 - **Backend:** Node.js / PHP / Python / Django / Laravel
@@ -44,9 +42,9 @@ Visit us at: [www.nsconstructions.com](http://www.nsconstructions.com) *(update 
 ```bash
 git clone https://github.com/jayanth0706/NSConstructions.git
 cd NSConstructions
-# If using plain HTML:
-# Open index.html in your browser
 
-# OR, if using Node.js:
+
+# Open folder in VSCode
 npm install
-npm start
+npm run dev
+```
