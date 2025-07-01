@@ -1,7 +1,9 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
+import { useRouter } from 'next/router';
 import { Filter, MapPin, Phone, Mail, MessageSquare, User } from 'lucide-react';
-
 const ProjectsPage = () => {
+  const router = useRouter();
+  const { filter: urlFilter, projectId: urlProjectId } = router.query ?? {};
   const [activeFilter, setActiveFilter] = useState('All');
   const [visibleProjects, setVisibleProjects] = useState(6);
   const [selectedProject, setSelectedProject] = useState<any | null>(null);
@@ -261,6 +263,21 @@ const ProjectsPage = () => {
     },
   ];
 
+  // Initialize state from URL parameters
+  useEffect(() => {
+    if (urlFilter && typeof urlFilter === 'string' && filters.includes(urlFilter)) {
+      setActiveFilter(urlFilter);
+    }
+    
+    if (urlProjectId && typeof urlProjectId === 'string') {
+      const projectId = parseInt(urlProjectId);
+      if (!isNaN(projectId)) {
+        const project = projects.find(p => p.id === projectId);
+        if (project) setSelectedProject(project);
+      }
+    }
+  }, [urlFilter, urlProjectId]);
+
   const filteredProjects = activeFilter === 'All'
     ? projects
     : projects.filter(project => project.type === activeFilter);
@@ -268,8 +285,40 @@ const ProjectsPage = () => {
   const displayedProjects = filteredProjects.slice(0, visibleProjects);
 
   const loadMore = () => setVisibleProjects(prev => prev + 6);
-  const openModal = (project: any) => setSelectedProject(project);
-  const closeModal = () => setSelectedProject(null);
+  
+  const handleFilterChange = (filter: string) => {
+    setActiveFilter(filter);
+    setVisibleProjects(6);
+    
+    // Update URL without reloading page
+    router.push({
+      pathname: router.pathname,
+      query: { ...router.query, filter }
+    }, undefined, { shallow: true });
+  };
+
+  const openModal = (project: any) => {
+    setSelectedProject(project);
+    
+    // Add project ID to URL
+    router.push({
+      pathname: router.pathname,
+      query: { ...router.query, projectId: project.id }
+    }, undefined, { shallow: true });
+  };
+
+  const closeModal = () => {
+    setSelectedProject(null);
+    
+    // Remove project ID from URL
+    const newQuery = { ...router.query };
+    delete newQuery.projectId;
+    router.push({
+      pathname: router.pathname,
+      query: newQuery
+    }, undefined, { shallow: true });
+  };
+
 
   return (
     <div className="pt-20 pb-16">
