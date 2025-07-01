@@ -1,28 +1,10 @@
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 import { Filter, MapPin, Phone, Mail, MessageSquare, User } from 'lucide-react';
 
 const ProjectsPage = () => {
   const [activeFilter, setActiveFilter] = useState('All');
   const [visibleProjects, setVisibleProjects] = useState(6);
   const [selectedProject, setSelectedProject] = useState<any | null>(null);
-
-   // Restore state from localStorage on component mount
-  useEffect(() => {
-    const savedFilter = localStorage.getItem('activeFilter');
-    const savedVisible = localStorage.getItem('visibleProjects');
-    
-    if (savedFilter) setActiveFilter(savedFilter);
-    if (savedVisible) setVisibleProjects(parseInt(savedVisible, 10));
-  }, []);
-
-  // Save state to localStorage whenever it changes
-  useEffect(() => {
-    localStorage.setItem('activeFilter', activeFilter);
-  }, [activeFilter]);
-
-  useEffect(() => {
-    localStorage.setItem('visibleProjects', visibleProjects.toString());
-  }, [visibleProjects]);
 
   const filters = ['All', 'Apartments', 'Villa', 'Commercial', 'Plots'];
 
