@@ -26,25 +26,30 @@ Visit us at: [ns-constructions.vercel.app](https://ns-constructions.vercel.app/)
 
 ## 🛠️ Tech Stack
 
-- **Frontend:** HTML, CSS, JavaScript / React / Bootstrap
-- **Backend:** Node.js / PHP / Python / Django / Laravel
-- **Database:** MySQL / MongoDB / Firebase
-- **Hosting:** GitHub Pages / Vercel / Netlify / AWS
-
-## 📸 Screenshots
-
-> Add screenshots of your site here
-
-![Homepage](screenshots/homepage.png)
+- **Frontend:** HTML, CSS / React / TypeScript
+- **Backend:** Node.js 
+- **Database:** MySQL / EMailJs
+- **Hosting:** GitHub Pages / Vercel
 
 ## 📦 How to Run Locally
 
 ```bash
 git clone https://github.com/jayanth0706/NSConstructions.git
 cd NSConstructions
-
-
 # Open folder in VSCode
 npm install
 npm run dev
 ```
+
+## 🤝 Contributing
+
+Contributions are welcome! Feel free to open issues or submit pull requests.
+
+## 📧 Contact
+Have questions or suggestions?
+
+📍 Hyderabad, India
+
+📧 jayanthchary779933@gmail.com
+
+📞 +91-7981976192
