@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { Filter, MapPin, Phone, Mail, MessageSquare, User } from 'lucide-react';
 
 const ProjectsPage = () => {
@@ -260,6 +260,11 @@ const ProjectsPage = () => {
       }
     },
   ];
+
+  // Handle scroll restoration on page reload
+  useEffect(() => {
+    window.history.scrollRestoration = 'manual';
+  }, []);
 
   const filteredProjects = activeFilter === 'All'
     ? projects
