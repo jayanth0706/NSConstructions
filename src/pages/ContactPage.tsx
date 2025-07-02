@@ -17,25 +17,25 @@ const ContactPage = () => {
   });
 
   const [isSubmitting, setIsSubmitting] = useState(false);
-
-  // New state to track the current page state
+  
   const [currentPage, setCurrentPage] = useState<string | null>(null);
 
   useEffect(() => {
     const storedPage = sessionStorage.getItem('currentPage');
-    if (storedPage) {
-    } else {
+    if (storedPage && window.location.pathname!== storedPage) {
+      // Add a small delay to prevent potential infinite loops
+      setTimeout(() => {
+        window.location.replace(storedPage);
+      }, 100);
+    } else if (!storedPage) {
       setCurrentPage(window.location.pathname);
       sessionStorage.setItem('currentPage', window.location.pathname);
     }
   }, []);
 
   useEffect(() => {
-    if (currentPage) {
-      sessionStorage.setItem('currentPage', currentPage);
-      if (window.location.pathname !== currentPage) {
-        window.location.replace(currentPage);
-      }
+    if (currentPage && window.location.pathname!== currentPage) {
+      window.location.replace(currentPage);
     }
   }, [currentPage]);
 
