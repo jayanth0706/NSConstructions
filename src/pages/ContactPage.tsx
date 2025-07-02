@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import emailjs from '@emailjs/browser';
 import { MapPin, Phone, Mail, Clock, Calculator, Send } from 'lucide-react';
 import EMICalculator from '../components/Contact/EMICalculator';
@@ -17,6 +17,27 @@ const ContactPage = () => {
   });
 
   const [isSubmitting, setIsSubmitting] = useState(false);
+
+  // New state to track the current page state
+  const [currentPage, setCurrentPage] = useState<string | null>(null);
+
+  useEffect(() => {
+    const storedPage = sessionStorage.getItem('currentPage');
+    if (storedPage) {
+    } else {
+      setCurrentPage(window.location.pathname);
+      sessionStorage.setItem('currentPage', window.location.pathname);
+    }
+  }, []);
+
+  useEffect(() => {
+    if (currentPage) {
+      sessionStorage.setItem('currentPage', currentPage);
+      if (window.location.pathname !== currentPage) {
+        window.location.replace(currentPage);
+      }
+    }
+  }, [currentPage]);
 
   const handleInputChange = (
     e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>
