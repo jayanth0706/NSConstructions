@@ -26,13 +26,13 @@ const Footer = () => {
             </p>
             <div className="flex space-x-4">
               <a
-                href="https://instagram.com/nsconstructions"
+                href="https://github.com/jayanth0706"
                 className="p-2 bg-primary-600 rounded-lg hover:bg-accent-500 transition-colors"
               >
                 <Instagram className="h-5 w-5" />
               </a>
               <a
-                href="https://linkedin.com/company/nsconstructions"
+                href="https://www.linkedin.com/in/jayanth0706/"
                 className="p-2 bg-primary-600 rounded-lg hover:bg-accent-500 transition-colors"
               >
                 <Linkedin className="h-5 w-5" />
