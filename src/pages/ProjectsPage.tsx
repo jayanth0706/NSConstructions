@@ -34,8 +34,8 @@ const ProjectsPage = () => {
       price: '₹2.0 Cr onwards',
       contact: {
         name: 'Jayanth Pavanagundla',
-        phone: '+91 79xxxxxxxx',
-        whatsapp: '+91 79xxxxxxxx',
+        phone: '+91 7981976192',
+        whatsapp: '+91 7981976192',
         email: 'pjayanth.ns@gmail.com'
       }
     },
@@ -61,8 +61,8 @@ const ProjectsPage = () => {
       price: '₹60L onwards',
       contact: {
         name: 'Nakkala Yogananda Reddy',
-        phone: '+91 98xxxxxxxx',
-        whatsapp: '+91 98xxxxxxxx',
+        phone: '+91 9846743210',
+        whatsapp: '+91 9846743210',
         email: 'nyoganandareddy.ns@gmail.com'
       }
     },
@@ -88,8 +88,8 @@ const ProjectsPage = () => {
       price: '₹80L onwards',
       contact: {
         name: 'Cherala Vishnu',
-        phone: '+91 63xxxxxxxx',
-        whatsapp: '+91 63xxxxxxxx',
+        phone: '+91 6300533052',
+        whatsapp: '+91 6300533052',
         email: 'cvishnu.ns@gmail.com'
       }
     },
@@ -118,8 +118,8 @@ const ProjectsPage = () => {
       price: '₹50L onwards',
       contact: {
         name: 'Pavanagundla Dhanush',
-        phone: '+91 95xxxxxxxx',
-        whatsapp: '+91 95xxxxxxxx',
+        phone: '+91 9550479936',
+        whatsapp: '+91 9550479936',
         email: 'pdhanush.ns@gmail.com'
       }
     },
@@ -147,8 +147,8 @@ const ProjectsPage = () => {
       price: '₹1.0 Cr onwards',
       contact: {
         name: 'Jayanth Pavanagundla',
-        phone: '+91 79xxxxxxxx',
-        whatsapp: '+91 79xxxxxxxx',
+        phone: '+91 7981976192',
+        whatsapp: '+91 7981976192',
         email: 'pjayanth.ns@gmail.com'
       }
     },
@@ -176,8 +176,8 @@ const ProjectsPage = () => {
       price: '₹90L onwards',
       contact: {
         name: 'Cherala Vishnu',
-        phone: '+91 63xxxxxxxx',
-        whatsapp: '+91 63xxxxxxxx',
+        phone: '+91 6300533052',
+        whatsapp: '+91 6300533052',
         email: 'cvishnu.ns@gmail.com'
       }
     },
@@ -202,8 +202,8 @@ const ProjectsPage = () => {
       price: '₹55 L onwards',
       contact: {
         name: 'Nakkala Yogananda Reddy',
-        phone: '+91 98xxxxxxxx',
-        whatsapp: '+91 98xxxxxxxx',
+        phone: '+91 9846743210',
+        whatsapp: '+91 9846743210',
         email: 'nyoganandareddy.ns@gmail.com'
       }
     },
@@ -229,8 +229,8 @@ const ProjectsPage = () => {
       price: '₹2.5 Cr onwards',
       contact: {
         name: 'Jayanth Pavanagundla',
-        phone: '+91 79xxxxxxxx',
-        whatsapp: '+91 79xxxxxxxx',
+        phone: '+91 7981976192',
+        whatsapp: '+91 7981976192',
         email: 'pjayanth.ns@gmail.com'
       }
     },
@@ -254,8 +254,8 @@ const ProjectsPage = () => {
       price: '₹40 L onwards',
       contact: {
         name: 'Pavanagundla Dhanush',
-        phone: '+91 95xxxxxxxx',
-        whatsapp: '+91 9xxxxxxxx',
+        phone: '+91 9550479936',
+        whatsapp: '+91 9550479936',
         email: 'pdhanush.ns@gmail.com'
       }
     },
